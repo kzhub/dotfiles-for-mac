@@ -1,0 +1,6 @@
+git:
+  pagers:
+    - pager: delta --dark --paging=never --side-by-side --line-numbers --hyperlinks --hyperlinks-file-link-format="lazygit-edit://{path}:{line}"
+
+gui:
+  language: "en"
