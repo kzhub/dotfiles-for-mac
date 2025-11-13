@@ -3,5 +3,9 @@ git:
     colorArg: always
     pager: delta --dark --paging=never --side-by-side --line-numbers --hyperlinks --hyperlinks-file-link-format="lazygit-edit://{path}:{line}" --syntax-theme=Dracula
 
+os:
+  editCommand: "nvim"
+  editCommandTemplate: '{{editor}} --server "$NVIM_SERVER_PIPE" --remote-tab "{{filename}}"'
+
 gui:
   language: "en"

@@ -17,5 +17,11 @@ return {
     keys = {
       { "<leader>gg", "<cmd>LazyGit<cr>", desc = "LazyGit" },
     },
+    config = function()
+      -- Setup nvim server for lazygit integration
+      local server_pipe = "/tmp/nvim-server-" .. vim.fn.getpid() .. ".pipe"
+      vim.fn.serverstart(server_pipe)
+      vim.env.NVIM_SERVER_PIPE = server_pipe
+    end,
   },
 }
